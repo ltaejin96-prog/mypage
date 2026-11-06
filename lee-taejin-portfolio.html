@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="이태진의 한영 통번역 포트폴리오 · Lee TaeJin, Korean–English translator and interpreter">
+<meta name="theme-color" content="#090e20">
+<title>이태진 · 한영 통번역 포트폴리오</title>
+<style>
+:root{color-scheme:dark;--bg:#090e20;--panel:#101831;--line:#2a3757;--white:#f4f6ff;--muted:#bcc8e2;--accent:#adbeff;--mono:ui-monospace,Consolas,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+html[lang=ko] [lang=en],html[lang=en] [lang=ko]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--white);font:16px/1.7 system-ui,"Malgun Gothic","Apple SD Gothic Neo",sans-serif}
+h1,h2,h3,p,figure,blockquote{margin:0} h1,h2,h3{line-height:1.15;letter-spacing:-.04em} p{color:var(--muted)} a{color:inherit} button,input,textarea{font:inherit} button,a{touch-action:manipulation} :focus-visible{outline:2px solid #dce4ff;outline-offset:4px}
+.wrap{width:min(1120px,calc(100% - 48px));margin-inline:auto}
+.top{position:sticky;top:0;z-index:2;background:#090e20f5;border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:68px}
+.brand{font-weight:760;text-decoration:none;letter-spacing:.025em}
+.brand b{color:var(--accent);font-family:var(--mono);margin-right:8px}
+.nav-links{display:flex;gap:23px;font-size:.86rem;color:var(--muted)}
+.nav-links a{text-decoration:none}.nav-links a:hover{color:white;text-decoration:underline}
+.langs{display:flex;padding:3px;gap:2px;border:1px solid var(--line);border-radius:8px}
+.langs button{border:0;border-radius:5px;color:var(--muted);background:none;padding:5px 10px;cursor:pointer;font:700 .8rem/1.7 var(--mono);min-height:34px}
+.langs button[aria-pressed=true]{background:#e5ebff;color:#101831}
+.hero{position:relative;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--line);background:radial-gradient(ellipse at 79% 42%,#253569 0,transparent 53%),linear-gradient(130deg,#0d142a,#0a0f20 75%)}
+.hero-inner{min-height:520px;display:grid;grid-template-columns:1.14fr .86fr;align-items:center;gap:26px;padding-block:70px}
+.eyebrow,.index,.tag,.coord{color:var(--accent);font:700 .75rem/1.55 var(--mono);letter-spacing:.1em;text-transform:uppercase}
+.hero h1{font-size:clamp(3.1rem,9.5vw,7rem);margin:.12em 0}
+.hero h1 [lang=en]{font-size:.78em}
+.hero h2{font-size:clamp(1.22rem,3.1vw,2rem);font-weight:650;margin-bottom:15px}
+.hero p{font-size:1.05rem;max-width:34rem}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:45px;border:1px solid var(--line);padding:9px 15px;border-radius:7px;background:#151f3a;color:var(--white);text-decoration:none;font-weight:700;cursor:pointer;font-size:.9rem}
+.btn:hover{border-color:var(--accent);background:#23325a}
+.primary{background:#e5ebff;color:#111a32;border-color:#e5ebff}.primary:hover{background:#becdff;color:#111a32}
+.orbit{width:100%;max-width:440px;justify-self:end;filter:drop-shadow(0 0 20px #738dff38)}
+.section{padding-block:66px;border-bottom:1px solid var(--line)}
+.section h2{font-size:clamp(2rem,5vw,3.05rem);margin:8px 0 16px}
+.lead{max-width:47rem;margin-bottom:24px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.card,.sample,.culture-item,.contact{background:linear-gradient(145deg,#141e39,#10172c);border:1px solid var(--line);border-radius:12px}
+.card{padding:22px;transition:transform .18s,border-color .18s,background .18s}
+@media (hover:hover){.card:hover{transform:translateY(-5px);border-color:#8b9fe8;background:#1a2749}}
+.icon{display:grid;place-items:center;width:42px;height:42px;border:1px solid #46588c;border-radius:9px;color:#dce5ff;background:#1b284d;margin-bottom:22px}
+.icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.card h3,.culture-item h3,.sample h3{font-size:1.2rem;margin:5px 0 9px}
+.timeline{list-style:none;margin:25px 0 0;padding:0 0 0 20px;border-left:1px solid #495b8f}
+.timeline li{position:relative;padding:0 0 24px 10px}.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-26px;top:8px;width:9px;height:9px;border-radius:50%;background:#b9c8ff;box-shadow:0 0 0 4px #1e2b4f}
+.timeline h3{font-size:1.2rem;margin:5px 0 7px}
+.samples{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.sample{padding:19px}
+.sample summary{cursor:pointer;color:var(--accent);font-weight:700}
+.pair{display:grid;gap:9px;margin-top:14px}.pair figure{padding:12px;border-left:2px solid #6d82c7;background:#0c142a;border-radius:0 6px 6px 0}.pair figcaption{font:700 .72rem var(--mono);color:var(--accent);margin-bottom:5px}
+.culture{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.culture-item{padding:17px 19px}.culture-item ul{margin:9px 0 0;padding-left:19px;color:var(--muted)}
+.contact{padding:clamp(18px,4vw,32px);display:grid;grid-template-columns:.9fr 1.1fr;gap:30px}
+form{display:grid;gap:11px} label{display:grid;gap:4px;font-weight:650;font-size:.9rem}
+input,textarea{width:100%;border:1px solid #46577e;border-radius:6px;padding:8px 10px;background:#0b1329;color:var(--white)}textarea{resize:vertical}
+form button{justify-self:start}.note{font-size:.84rem}.status{color:#ffdcaa;font-size:.87rem}.status:empty{display:none}
+footer{padding-block:22px;color:var(--muted);font-size:.84rem}footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:760px){.nav-links{display:none}.hero-inner{grid-template-columns:1fr .55fr;min-height:420px;padding-block:48px}.grid{grid-template-columns:1fr}.card{padding:17px}.icon{margin-bottom:10px}.section{padding-block:47px}}
+@media(max-width:540px){.wrap{width:calc(100% - 32px)}.hero-inner{grid-template-columns:1fr;gap:4px}.orbit{max-width:230px;justify-self:center}.samples,.culture,.contact{grid-template-columns:1fr}.contact{gap:20px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="wrap nav">
+  <a class="brand" href="#top"><b aria-hidden="true">↔</b><span lang="ko">이태진</span><span lang="en">Lee TaeJin</span></a>
+  <nav class="nav-links" aria-label="섹션 / Sections">
+   <a href="#expertise"><span lang="ko">전문 분야</span><span lang="en">Expertise</span></a>
+   <a href="#experience"><span lang="ko">경력</span><span lang="en">Experience</span></a>
+   <a href="#samples"><span lang="ko">번역 샘플</span><span lang="en">Samples</span></a>
+   <a href="#culture"><span lang="ko">문화 취향</span><span lang="en">Influences</span></a>
+   <a href="#contact"><span lang="ko">문의</span><span lang="en">Contact</span></a>
+  </nav>
+  <div class="langs" role="group" aria-label="언어 / Language">
+   <button type="button" data-set-lang="ko" aria-pressed="true" aria-label="한국어">KO</button>
+   <button type="button" data-set-lang="en" aria-pressed="false" aria-label="English">EN</button>
+  </div>
+ </div>
+</header>
+<main id="top">
+ <section class="hero" aria-labelledby="name">
+  <div class="wrap hero-inner">
+   <div>
+    <div class="eyebrow">KOREAN ↔ ENGLISH</div>
+    <h1 id="name"><span lang="ko">이태진</span><span lang="en">Lee TaeJin</span></h1>
+    <h2><span lang="ko">한영 통번역사</span><span lang="en">Korean–English Translator &amp; Interpreter</span></h2>
+    <p><span lang="ko">게임의 재미부터 과학의 정확성까지, 원문의 핵심을 다른 언어로 전합니다.</span><span lang="en">From the thrill of a game to the precision of science, I carry what matters across languages.</span></p>
+    <div class="actions">
+     <a class="btn primary" href="#samples"><span lang="ko">번역 샘플 보기</span><span lang="en">Explore samples</span> ↗</a>
+     <button class="btn" type="button" id="hero-email"><span lang="ko">이메일 문의</span><span lang="en">Email me</span> ↗</button>
+    </div>
+   </div>
+   <svg class="orbit" viewBox="0 0 440 340" aria-hidden="true">
+    <defs>
+     <radialGradient id="planet"><stop stop-color="#4c64b4" stop-opacity=".55"/><stop offset="1" stop-color="#18274e" stop-opacity=".2"/></radialGradient>
+     <linearGradient id="beam"><stop stop-color="#809aff" stop-opacity="0"/><stop offset=".47" stop-color="#c7d6ff"/><stop offset="1" stop-color="#809aff" stop-opacity="0"/></linearGradient>
+    </defs>
+    <g fill="none" stroke="#8199e2">
+     <circle cx="221" cy="168" r="91" fill="url(#planet)"/><circle cx="221" cy="168" r="119" opacity=".4"/><circle cx="221" cy="168" r="146" opacity=".33" stroke-dasharray="2 7"/>
+     <ellipse cx="221" cy="168" rx="193" ry="57" transform="rotate(-23 221 168)" stroke="url(#beam)" stroke-width="1.6"/>
+     <path d="M221 20v296M44 168h353" opacity=".27" stroke-dasharray="3 6"/>
+    </g>
+    <g fill="#dce5ff"><circle cx="107" cy="224" r="4"/><circle cx="326" cy="111" r="4"/><circle cx="382" cy="65" r="2"/><circle cx="75" cy="78" r="2"/><circle cx="358" cy="251" r="2"/><circle cx="94" cy="281" r="1.5"/></g>
+    <text x="221" y="177" fill="#f2f5ff" text-anchor="middle" font-family="monospace" font-size="25" letter-spacing="2">KO ↔ EN</text>
+   </svg>
+  </div>
+ </section>
+
+ <section class="section" id="expertise"><div class="wrap">
+  <div class="index">01 / EXPERTISE</div>
+  <h2><span lang="ko">전문 분야</span><span lang="en">Expertise</span></h2>
+  <div class="grid">
+   <article class="card">
+    <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 7h10c2 0 4 2 4.5 6l.4 2c.4 2-1.5 3.3-3 2l-3-2H8l-3 2c-1.5 1.3-3.4 0-3-2l.5-2C3 9 5 7 7 7Z"/><path d="M6 11h5m-2.5-2.5v5m7.5-2.5h.1m2.4 2h.1"/></svg></div>
+    <h3><span lang="ko">비디오 게임</span><span lang="en">Video Games</span></h3>
+    <p><span lang="ko">캐릭터 대사, 세계관 텍스트, UI를 플레이 맥락과 화면에 맞게 옮깁니다.</span><span lang="en">Dialogue, lore, and UI that fit the game world and make sense in play.</span></p>
+   </article>
+   <article class="card">
+    <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M8 8h.1m7.9 0h.1M12 12h.1M8 16h.1m7.9 0h.1" stroke-width="3"/></svg></div>
+    <h3><span lang="ko">보드 게임</span><span lang="en">Board Games</span></h3>
+    <p><span lang="ko">룰북과 카드에서 행동 순서, 적용 조건, 예외가 한눈에 들어오도록 다듬습니다.</span><span lang="en">Rulebooks and cards that make turn order, conditions, and exceptions easy to follow.</span></p>
+   </article>
+   <article class="card">
+    <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 3c0 8 10 10 10 18M17 3c0 8-10 10-10 18m1-16h8M9 9h6m-6 6h6m-7 4h8"/></svg></div>
+    <h3><span lang="ko">생명과학</span><span lang="en">Life Sciences</span></h3>
+    <p><span lang="ko">연구 텍스트의 용어를 일관되게 쓰고, 관찰 결과와 해석의 차이를 분명히 드러냅니다.</span><span lang="en">Consistent terminology and a clear distinction between observations and interpretations.</span></p>
+   </article>
+  </div>
+ </div></section>
+
+ <section class="section" id="experience"><div class="wrap">
+  <div class="index">02 / EXPERIENCE</div>
+  <h2><span lang="ko">경력 타임라인</span><span lang="en">Career Timeline</span></h2>
+  <ol class="timeline">
+   <li>
+    <div class="tag"><span lang="ko">현재 · 통번역 석사 과정</span><span lang="en">Present · Graduate Studies</span></div>
+    <h3><span lang="ko">한국외국어대학교 통번역대학원</span><span lang="en">Hankuk University of Foreign Studies</span></h3>
+    <p><span lang="ko">한영 번역 석사 과정 · 2027년 2월 졸업 예정</span><span lang="en">Master’s program in English–Korean Translation · Expected February 2027</span></p>
+   </li>
+   <li>
+    <div class="tag"><span lang="ko">2025 · 문학 번역</span><span lang="en">2025 · Literary Translation</span></div>
+    <h3><span lang="ko">한국문학번역원 신인 번역상 1위</span><span lang="en">First Place, LTI Korea Award for Aspiring Translators</span></h3>
+   </li>
+   <li>
+    <div class="tag"><span lang="ko">대표 프로젝트 · 유저 번역</span><span lang="en">Featured Project · Fan Translation</span></div>
+    <h3><span lang="ko">팀 왈도 – 드래곤에이지: 인퀴지션</span><span lang="en">Team Waldo – Dragon Age: Inquisition</span></h3>
+    <p><span lang="ko">팀 왈도의 한국어 유저 번역 프로젝트에 참여했습니다.</span><span lang="en">Contributed to Team Waldo’s Korean fan translation.</span></p>
+   </li>
+  </ol>
+ </div></section>
+
+ <section class="section" id="samples"><div class="wrap">
+  <div class="index">03 / TRANSLATION SAMPLES</div>
+  <h2><span lang="ko">번역 샘플</span><span lang="en">Translation Samples</span></h2>
+  <p class="lead"><span lang="ko">분야별 번역 방식을 보여 주기 위해 만든 시연용 예문입니다.</span><span lang="en">Illustrative examples created for this portfolio.</span></p>
+  <div class="samples">
+   <article class="sample">
+    <div class="tag">EN → KO</div>
+    <h3><span lang="ko">판타지 게임 · 경비병 대사</span><span lang="en">Fantasy Game · Guard Dialogue</span></h3>
+    <details open>
+     <summary><span lang="ko">원문과 번역</span><span lang="en">Source and translation</span></summary>
+     <div class="pair">
+      <figure><figcaption>EN / SOURCE</figcaption><blockquote data-text-lang="en">The bell's for the living. If you hear it after midnight, stay where you are.</blockquote></figure>
+      <figure><figcaption>KO / TRANSLATION</figcaption><blockquote data-text-lang="ko">저 종은 산 사람 들으라고 치는 거야. 자정 넘어서 울리거든 꼼짝도 하지 마.</blockquote></figure>
+     </div>
+    </details>
+   </article>
+   <article class="sample">
+    <div class="tag">KO → EN</div>
+    <h3><span lang="ko">보드 게임 · 행동 규칙</span><span lang="en">Board Game · Action Rule</span></h3>
+    <details open>
+     <summary><span lang="ko">원문과 번역</span><span lang="en">Source and translation</span></summary>
+     <div class="pair">
+      <figure><figcaption>KO / SOURCE</figcaption><blockquote data-text-lang="ko">자기 차례에 토큰 1개를 써서 카드 2장을 뽑을 수 있다. 그중 1장은 손에 넣고, 나머지 1장은 버린다.</blockquote></figure>
+      <figure><figcaption>EN / TRANSLATION</figcaption><blockquote data-text-lang="en">On your turn, you may spend 1 token to draw 2 cards. Add 1 to your hand and discard the other.</blockquote></figure>
+     </div>
+    </details>
+   </article>
+  </div>
+ </div></section>
+
+ <section class="section" id="culture"><div class="wrap">
+  <div class="index">04 / CULTURAL INFLUENCES</div>
+  <h2><span lang="ko">좋아하는 작품들</span><span lang="en">The Stories I Come Back To</span></h2>
+  <p class="lead"><span lang="ko">오랫동안 게임을 즐기며 쌓은 추억이 번역의 출발점입니다. 제가 좋아하는 게임을 다른 언어를 쓰는 플레이어도 자기 방식으로 즐길 수 있도록 돕고 싶습니다. 영화와 시리즈, 소설에서도 오래 기억에 남는 인물과 세계를 만납니다.</span><span lang="en">I’ve been a gamer all my life. Some of my fondest memories come from games, and I want players who speak another language to have the chance to make memories of their own with those same games. I also find characters and worlds that stay with me in films, series, and novels.</span></p>
+  <div class="culture">
+   <article class="culture-item"><div class="tag">01 / PLAY</div><h3><span lang="ko">비디오 게임</span><span lang="en">Video Games</span></h3><ul><li>Portal 1 &amp; 2</li><li>Outer Wilds</li><li>Return of the Obra Dinn</li><li>Hades</li></ul></article>
+   <article class="culture-item"><div class="tag">02 / CINEMA</div><h3><span lang="ko">영화</span><span lang="en">Films</span></h3><ul><li><span lang="ko">기생충</span><span lang="en">Parasite</span></li><li><span lang="ko">붉은 돼지</span><span lang="en">Porco Rosso</span></li><li><span lang="ko">지구를 지켜라!</span><span lang="en">Save the Green Planet!</span></li><li><span lang="ko">장화신은 고양이: 끝내주는 모험</span><span lang="en">Puss in Boots: The Last Wish</span></li></ul></article>
+   <article class="culture-item"><div class="tag">03 / SERIES</div><h3><span lang="ko">TV 시리즈</span><span lang="en">TV Series</span></h3><ul><li><span lang="ko">보잭 홀스맨</span><span lang="en">BoJack Horseman</span></li><li><span lang="ko">베터 콜 사울</span><span lang="en">Better Call Saul</span></li><li><span lang="ko">러브, 데스 + 로봇</span><span lang="en">Love, Death &amp; Robots</span></li><li>Ghost in the Shell: Stand Alone Complex</li></ul></article>
+   <article class="culture-item"><div class="tag">04 / READ</div><h3><span lang="ko">책</span><span lang="en">Books</span></h3><ul><li><span lang="ko">눈물을 마시는 새</span><span lang="en">The Bird That Drinks Tears</span></li><li><span lang="ko">노인과 바다</span><span lang="en">The Old Man and the Sea</span></li><li><span lang="ko">듄 시리즈</span><span lang="en">Dune series</span></li><li><span lang="ko">은하수를 여행하는 히치하이커를 위한 안내서</span><span lang="en">The Hitchhiker’s Guide to the Galaxy</span></li></ul></article>
+  </div>
+ </div></section>
+
+ <section class="section" id="contact"><div class="wrap">
+  <div class="index">05 / CONTACT</div>
+  <h2><span lang="ko">프로젝트 문의</span><span lang="en">Let’s Talk</span></h2>
+  <div class="contact">
+   <div>
+    <p><span lang="ko">프로젝트 분야와 언어 방향, 예상 분량과 일정을 알려 주시면 작업 범위를 파악하는 데 도움이 됩니다.</span><span lang="en">Tell me a little about your project, including the language direction, approximate length, and timeline.</span></p>
+    <div class="actions">
+     <button id="contact-email" type="button" class="btn primary"><span lang="ko">이메일 열기</span><span lang="en">Open email</span> ↗</button>
+     <a id="linkedin-link" class="btn" hidden target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+     <button id="linkedin-pending" type="button" class="btn">LinkedIn ↗</button>
+    </div>
+    <p class="note" id="contact-note" style="margin-top:12px"><span lang="ko">이메일과 LinkedIn 주소는 등록 예정입니다.</span><span lang="en">Email and LinkedIn details are pending.</span></p>
+   </div>
+   <form id="inquiry">
+    <label><span lang="ko">이름</span><span lang="en">Name</span><input name="name" autocomplete="name" required maxlength="120"></label>
+    <label><span lang="ko">회신 이메일</span><span lang="en">Reply email</span><input type="email" name="reply" autocomplete="email" required maxlength="254"></label>
+    <label><span lang="ko">프로젝트 내용</span><span lang="en">Project details</span><textarea name="message" rows="4" required maxlength="1500"></textarea></label>
+    <button class="btn" type="submit"><span lang="ko">문의 메일 작성</span><span lang="en">Draft an email</span> ↗</button>
+    <p class="note"><span lang="ko">입력한 내용으로 기본 메일 앱에서 초안을 엽니다. 발송은 메일 앱에서 진행합니다.</span><span lang="en">Your default email app opens a draft with these details. Send it from there.</span></p>
+   </form>
+   <p class="status" id="contact-status" role="status"></p>
+  </div>
+ </div></section>
+</main>
+<footer><div class="wrap"><span>© <span lang="ko">이태진</span><span lang="en">Lee TaeJin</span></span><span class="coord">KO ↔ EN</span></div></footer>
+<script>
+'use strict';
+
+// 실제 이메일 주소와 LinkedIn 프로필 URL을 입력하세요.
+const CONTACT = {
+  email: '',
+  linkedin: ''
+};
+
+const root = document.documentElement;
+const languageButtons = document.querySelectorAll('[data-set-lang]');
+const form = document.getElementById('inquiry');
+const status = document.getElementById('contact-status');
+const linkedin = document.getElementById('linkedin-link');
+const linkedinPending = document.getElementById('linkedin-pending');
+const contactNote = document.getElementById('contact-note');
+let activeNotice = '';
+
+const copy = {
+  ko: {
+    title: '이태진 · 한영 통번역 포트폴리오',
+    subject: '통번역 프로젝트 문의',
+    fields: ['이름', '회신 이메일', '프로젝트 내용'],
+    noEmail: '문의 메일을 열려면 이메일 주소를 등록해야 합니다.',
+    noLinkedIn: 'LinkedIn 프로필 주소는 등록 예정입니다.',
+    emailPending: '이메일 주소는 등록 예정입니다.',
+    linkedinPending: 'LinkedIn 주소는 등록 예정입니다.',
+    bothPending: '이메일과 LinkedIn 주소는 등록 예정입니다.'
+  },
+  en: {
+    title: 'Lee TaeJin · Korean–English Translation Portfolio',
+    subject: 'Translation or interpreting inquiry',
+    fields: ['Name', 'Reply email', 'Project details'],
+    noEmail: 'An email address needs to be configured before a draft can be opened.',
+    noLinkedIn: 'A LinkedIn profile URL has yet to be added.',
+    emailPending: 'Email address pending.',
+    linkedinPending: 'LinkedIn profile pending.',
+    bothPending: 'Email and LinkedIn details are pending.'
+  }
+};
+
+const email = CONTACT.email.trim();
+const hasEmail = /^[^\s@?&#]+@[^\s@?&#]+\.[^\s@?&#]+$/.test(email);
+const hasLinkedIn = /^https:\/\/(?:[a-z]+\.)?linkedin\.com\/in\/[^\s/]+\/?$/i.test(CONTACT.linkedin);
+if (hasLinkedIn) {
+  linkedin.href = CONTACT.linkedin;
+  linkedin.hidden = false;
+  linkedinPending.hidden = true;
+}
+
+function setNotice(key) {
+  activeNotice = key;
+  status.textContent = key ? copy[root.lang][key] : '';
+}
+
+function setLanguage(language) {
+  root.lang = language;
+  document.title = copy[language].title;
+  languageButtons.forEach(button => {
+    button.setAttribute('aria-pressed', String(button.dataset.setLang === language));
+  });
+  contactNote.hidden = hasEmail && hasLinkedIn;
+  const noteKey = hasEmail ? 'linkedinPending' : hasLinkedIn ? 'emailPending' : 'bothPending';
+  contactNote.textContent = contactNote.hidden ? '' : copy[language][noteKey];
+  setNotice(activeNotice);
+}
+
+function openEmail(values) {
+  if (!hasEmail) {
+    setNotice('noEmail');
+    document.getElementById('contact').scrollIntoView();
+    return;
+  }
+  setNotice('');
+  const {subject, fields} = copy[root.lang];
+  const query = new URLSearchParams({subject});
+  if (values) {
+    query.set('body', fields.map((label, index) => label + '\n' + values[index]).join('\n\n').replace(/\r?\n/g, '\r\n'));
+  }
+  window.location.href = 'mailto:' + email + '?' + query.toString().replace(/\+/g, '%20');
+}
+
+languageButtons.forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.setLang)));
+document.getElementById('hero-email').addEventListener('click', () => openEmail());
+document.getElementById('contact-email').addEventListener('click', () => openEmail());
+linkedinPending.addEventListener('click', () => setNotice('noLinkedIn'));
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  const values = new FormData(form);
+  openEmail(['name', 'reply', 'message'].map(field => String(values.get(field)).trim()));
+});
+document.querySelectorAll('[data-text-lang]').forEach(excerpt => {
+  excerpt.setAttribute('lang', excerpt.dataset.textLang);
+});
+setLanguage('ko');
+</script>
+<style>
+/* Keep source and target visible together regardless of the interface language. */
+html[lang=ko] [data-text-lang][lang=en],html[lang=en] [data-text-lang][lang=ko]{display:block!important}
+[hidden]{display:none!important}
+</style>
+</body>
+</html>
